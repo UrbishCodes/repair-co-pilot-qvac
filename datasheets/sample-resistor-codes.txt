@@ -1,0 +1,26 @@
+RESISTOR MARKING CODES — QUICK REFERENCE
+Through-hole resistors use color bands; SMD resistors use printed numeric codes.
+
+4-BAND COLOR CODE: Band1 Band2 Multiplier Tolerance
+- Black 0, Brown 1, Red 2, Orange 3, Yellow 4, Green 5, Blue 6, Violet 7, Grey 8, White 9
+- Multiplier: Black x1, Brown x10, Red x100, Orange x1k, Yellow x10k, Green x100k, Blue x1M, Gold x0.1, Silver x0.01
+- Tolerance: Brown +/-1%, Red +/-2%, Gold +/-5%, Silver +/-10%
+
+5-BAND COLOR CODE (precision): Band1 Band2 Band3 Multiplier Tolerance
+- Same digit colors for first three bands, then multiplier and tolerance.
+
+SMD NUMERIC CODES:
+- 3-digit: first two digits are the value, third is the multiplier (number of zeros). Example: 473 = 47 x 1000 = 47,000 ohms = 47k.
+- 4-digit: first three digits are the value, fourth is the multiplier. Example: 1002 = 100 x 100 = 10,000 ohms = 10k.
+- "R" marks the decimal point: 4R7 = 4.7 ohms, 0R22 = 0.22 ohms.
+- "0", "00", "000" = zero-ohm jumper.
+
+EXAMPLES:
+- 220 printed = 22 ohms. 221 = 220 ohms. 222 = 2.2k ohms. 223 = 22k ohms.
+- 104 = 100k ohms. 105 = 1M ohm.
+- Brown-Black-Red-Gold = 1k ohms +/-5%.
+- Yellow-Violet-Red-Gold = 4.7k ohms +/-5%.
+
+POWER RATINGS (through-hole): standard 1/4 W. If a resistor is burnt, replace with the SAME resistance and EQUAL OR HIGHER wattage — a burnt 1/4 W resistor can be replaced with a 1/2 W or 1 W part of the same value.
+
+TESTING: measure out-of-circuit if possible; in-circuit readings are affected by parallel paths. A resistor reading much HIGHER than marked is drifting bad; reading near 0 may indicate a parallel short elsewhere.
