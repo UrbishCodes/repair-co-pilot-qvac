@@ -1,0 +1,27 @@
+1N4148 SMALL-SIGNAL DIODE — DATASHEET SUMMARY
+Markings: 1N4148, 1N914 (equivalent)
+Type: Silicon switching diode, DO-35 glass package. Cathode marked with a black band.
+
+ABSOLUTE MAXIMUM RATINGS:
+- Repetitive Peak Reverse Voltage VRRM: 100 V
+- RMS Reverse Voltage VRMS: 75 V
+- Continuous Forward Current IF: 200 mA
+- Peak Forward Surge Current IFSM: 1 A (1 s), 4 A (1 us pulse)
+- Power Dissipation: 500 mW
+- Junction Temperature: -65 to +175 C
+
+ELECTRICAL CHARACTERISTICS:
+- Forward Voltage VF: 0.62-0.72 V typical at IF=10 mA; 1.0 V max at IF=100 mA
+- Reverse Current IR: 25 nA max at VR=20 V; 5 uA max at VR=75 V
+- Reverse Recovery Time trr: 4 ns max
+- Total Capacitance: 4 pF max
+
+TESTING WITH A MULTIMETER (diode mode):
+- Forward: red lead on anode, black on cathode — reads ~0.6-0.7 V.
+- Reverse: leads swapped — reads OL (open).
+- ~0 V both directions = shorted diode (common failure after overcurrent).
+- OL both directions = open diode (common after surge).
+
+TYPICAL FAILURE MODES: shorted (reads ~0 V both ways) from overcurrent; open from voltage surge. Glass package may show no visible damage even when failed — always test electrically.
+
+COMMON SUBSTITUTES: 1N914 (identical), 1N4448, BAS16 (SOT-23 SMD version).
