@@ -1,0 +1,29 @@
+2N2222 NPN TRANSISTOR — DATASHEET SUMMARY
+Markings: 2N2222, 2N2222A, PN2222 (plastic TO-92), MMBT2222 (SOT-23)
+Type: NPN bipolar junction transistor, general purpose switching and amplification.
+Package: TO-18 metal can (2N2222), TO-92 plastic (PN2222).
+
+ABSOLUTE MAXIMUM RATINGS:
+- Collector-Emitter Voltage VCEO: 30 V (2N2222), 40 V (2N2222A)
+- Collector-Base Voltage VCBO: 60 V (2N2222), 75 V (2N2222A)
+- Emitter-Base Voltage VEBO: 5 V
+- Collector Current IC (continuous): 800 mA
+- Total Power Dissipation: 500 mW (TO-18), 625 mW (TO-92)
+- Junction Temperature: 175 C (2N2222A), 150 C (PN2222)
+
+ELECTRICAL CHARACTERISTICS (typical):
+- DC Current Gain hFE: 100-300 at IC=150 mA, VCE=10 V
+- Collector-Emitter Saturation Voltage VCE(sat): 0.3 V max at IC=150 mA
+- Base-Emitter Saturation Voltage VBE(sat): 1.2 V max
+- Transition Frequency fT: 250-300 MHz
+- Collector Cutoff Current: 10 nA max
+
+PINOUT (TO-92, flat side facing you, leads down, left to right): Emitter, Base, Collector.
+PINOUT (TO-18 metal can, bottom view, tab at emitter): Emitter, Base, Collector.
+
+TYPICAL FAILURE MODES:
+- Collector-emitter short: reads near 0 ohms both directions with multimeter diode test.
+- Open base: no collector current with base drive applied.
+- Overheating discoloration of the package indicates sustained overcurrent.
+
+COMMON SUBSTITUTES: 2N2222A, PN2222, BC337 (check pinout — BC337 is CBE in TO-92, different order), 2N3904 for low-current use only (200 mA max).
