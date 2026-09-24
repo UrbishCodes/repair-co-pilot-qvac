@@ -1,0 +1,30 @@
+LM7805 / 7805 VOLTAGE REGULATOR — DATASHEET SUMMARY
+Markings: 7805, LM7805, L7805, MC7805
+Type: Linear voltage regulator, fixed 5 V output, TO-220 package (also TO-92 as 78L05 for 100 mA).
+
+ABSOLUTE MAXIMUM RATINGS:
+- Input Voltage: 35 V max (25 V recommended max for the 5 V version)
+- Output Voltage: 5 V +/- 4% (4.8-5.2 V)
+- Output Current: 1 A max (TO-220, with heatsink)
+- Dropout Voltage: ~2 V (input must be at least 7 V for stable 5 V output)
+- Power Dissipation: internally limited by thermal shutdown
+
+ELECTRICAL CHARACTERISTICS:
+- Line Regulation: 100 mV max (7-25 V input)
+- Load Regulation: 100 mV max (5 mA - 1 A)
+- Quiescent Current: 5-8 mA
+- Thermal Shutdown: ~175 C junction
+- Short-Circuit Current Limit: ~2.2 A peak, folds back
+
+PINOUT (TO-220, front view, pins down, left to right): Input, Ground, Output.
+Typical circuit: 0.33 uF ceramic capacitor on input to ground, 0.1 uF ceramic on output to ground, placed close to the pins.
+
+TYPICAL FAILURE MODES:
+- Input shorted to output: multimeter reads near 0 ohms input-to-output with power off — regulator dead, downstream circuit may also be damaged by overvoltage.
+- Output stuck low (~0 V) with correct input: thermal or current-limit failure.
+- Oscillating output: missing or distant input/output capacitors.
+- Overheating without heatsink above ~0.5 A load: (Vin - 5 V) * Iout watts must be dissipated.
+
+TROUBLESHOOTING: measure input (should be >= 7 V), then output (should be 5 V). If input is good and output is wrong, replace the regulator and check the load for shorts.
+
+COMMON SUBSTITUTES: LM7805, L7805CV, MC7805 (same pinout). For lower heat, consider a buck converter module (different wiring).
