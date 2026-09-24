@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Repair Co-Pilot</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">🔧 Repair Co-Pilot</div>
+  <button id="libraryBtn" class="ghost" type="button" title="Datasheet library">📚 Library</button>
+</header>
+
+<ol class="steps" id="steps">
+  <li data-step="photo" class="active">Photo</li>
+  <li data-step="confirm">Markings</li>
+  <li data-step="diagnose">Diagnosis</li>
+  <li data-step="chat">Chat</li>
+</ol>
+
+<main>
+  <!-- STEP 1: PHOTO -->
+  <section id="step-photo" class="panel active">
+    <h1>Photograph the component</h1>
+    <p class="hint">Get close, straight-on, with good light. Printed markings need to be readable.</p>
+    <div class="photo-actions">
+      <label class="btn primary big" for="photoInput">📷 Take / pick photo</label>
+      <input id="photoInput" type="file" accept="image/jpeg,image/png" capture="environment" hidden>
+    </div>
+    <div id="photoPreview" class="preview" hidden>
+      <img id="photoImg" alt="Component photo">
+    </div>
+    <button id="readBtn" class="btn primary" type="button" hidden>Read markings →</button>
+    <div id="photoStatus" class="status" role="status"></div>
+  </section>
+
+  <!-- STEP 2: CONFIRM MARKINGS -->
+  <section id="step-confirm" class="panel">
+    <h1>Confirm the markings</h1>
+    <p class="hint">OCR misreads <b>0/O</b>, <b>5/S</b>, <b>1/I</b> on printed parts. Check against the photo.</p>
+    <div id="ocrWarnings" class="warnings" hidden></div>
+    <div id="blockList" class="blocks"></div>
+    <label class="field-label" for="markingsEdit">Marking text (editable)</label>
+    <textarea id="markingsEdit" rows="5" spellcheck="false"></textarea>
+    <div class="row">
+      <button id="backToPhoto" class="btn ghost" type="button">← Retake</button>
+      <button id="diagnoseBtn" class="btn primary" type="button">Diagnose →</button>
+    </div>
+    <div id="confirmStatus" class="status" role="status"></div>
+  </section>
+
+  <!-- STEP 3: DIAGNOSIS -->
+  <section id="step-diagnose" class="panel">
+    <h1>Diagnosis</h1>
+    <div id="noDocsNote" class="note" hidden>⚠️ No matching datasheet in the local library — general guidance from the markings only.</div>
+    <div id="card"></div>
+    <div class="row">
+      <button id="speakCardBtn" class="btn speak" type="button">🔊 Read aloud</button>
+      <button id="stopSpeakBtn" class="btn ghost" type="button" hidden>⏹ Stop</button>
+      <button id="toChatBtn" class="btn primary" type="button">Ask a follow-up →</button>
+    </div>
+    <div id="diagStatus" class="status" role="status"></div>
+  </section>
+
+  <!-- STEP 4: CHAT -->
+  <section id="step-chat" class="panel">
+    <h1>Follow-up questions</h1>
+    <p class="hint">Grounded in your markings + the datasheet excerpts. Short answers — you're mid-repair.</p>
+    <div id="thread" class="thread"></div>
+    <form id="chatForm" class="chat-form">
+      <input id="chatInput" type="text" placeholder="e.g. what wattage?" autocomplete="off">
+      <button class="btn primary" type="submit">Ask</button>
+    </form>
+    <div id="chatStatus" class="status" role="status"></div>
+  </section>
+</main>
+
+<!-- LIBRARY DRAWER -->
+<div id="drawer" class="drawer" hidden>
+  <div class="drawer-card">
+    <h2>📚 Datasheet library</h2>
+    <p class="hint">Add datasheets as <b>.txt</b> files or paste the text. They stay on this device.</p>
+    <div id="libStatus" class="status"></div>
+    <label class="btn ghost" for="libFiles">＋ Add .txt files</label>
+    <input id="libFiles" type="file" accept=".txt,.md,text/plain" multiple hidden>
+    <label class="field-label" for="libPaste">…or paste datasheet text</label>
+    <textarea id="libPaste" rows="4" placeholder="Paste datasheet text here"></textarea>
+    <input id="libName" type="text" placeholder="Name (e.g. NE555-datasheet)">
+    <div class="row">
+      <button id="libAddBtn" class="btn primary" type="button">Ingest</button>
+      <button id="libCloseBtn" class="btn ghost" type="button">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
