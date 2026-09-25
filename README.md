@@ -18,7 +18,7 @@ Photograph a dead circuit component — get a spoken diagnosis, a replacement pi
 Requires [Node.js](https://nodejs.org/) 20+.
 
 ```bash
-git clone https://github.com/UrbishGhimire/repair-co-pilot-qvac.git
+git clone https://github.com/joshua80st/repair-co-pilot-qvac.git
 cd repair-co-pilot-qvac
 npm install
 ```
