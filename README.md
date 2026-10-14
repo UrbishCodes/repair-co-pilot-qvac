@@ -9,16 +9,12 @@ Photograph a dead circuit component — get a spoken diagnosis, a replacement pi
 3. **Diagnosis** — the app searches your local datasheet library and produces an analysis card: identification, key specs with sources, likely failure cause, replacement part, numbered repair steps, and safety warnings.
 4. **Chat + read aloud** — ask follow-ups ("what wattage?") grounded in the same context, and have anything read aloud while both hands stay on the board.
 
-## Demo
-
-> Demo video and screenshots go here.
-
 ## Install
 
 Requires [Node.js](https://nodejs.org/) 20+.
 
 ```bash
-git clone https://github.com/joshua80st/repair-co-pilot-qvac.git
+git clone https://github.com/UrbishCodes/repair-co-pilot-qvac.git
 cd repair-co-pilot-qvac
 npm install
 ```
